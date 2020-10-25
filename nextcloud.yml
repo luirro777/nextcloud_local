@@ -1,0 +1,10 @@
+---
+- name: Nextcloud server playbook
+  hosts: nextcloud
+  become: True
+  roles:
+    - role: mysql
+    - role: apache
+    - role: php
+    - role: redis
+    - role: nextcloud

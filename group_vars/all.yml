@@ -1,0 +1,6 @@
+---
+dbname_nc: "nextclouddb"
+dbuser_nc: "nextclouduser"
+dbpass_nc: "nc2020"                     
+dbhost_nc: "172.28.100.24"
+ssh_user: adiuc

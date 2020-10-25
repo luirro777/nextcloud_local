@@ -1,0 +1,11 @@
+---
+
+ - name: Install the redis packages
+   apt: name={{ item  }} state=present
+   with_items: "{{ redis_packages  }}"
+   
+ - name: Ensure redis is started
+   service:
+     name: redis-server
+     state: started
+     enabled: yes

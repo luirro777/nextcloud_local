@@ -1,0 +1,35 @@
+---
+
+- name: Install unzip
+  apt: name=unzip state=present
+
+- name: Check if nc is already downloaded
+  stat: path="{{ nc_download_path }}"
+  register: nc_zipped
+
+- name: Download nextcloud
+  get_url: url="{{ nc_url }}" dest="{{ nc_download_path }}"
+  when: nc_zipped.stat.exists == False
+
+- name: Unzip nextcloud
+  unarchive: 
+    src: "{{ nc_download_path  }}"
+    dest: "{{ nc_webserver_path }}" 
+    copy: no
+    owner: www-data
+    group: www-data
+    mode: 0755
+  
+#- name: Copy nc config file
+#  template:
+#    src: "{{nc_template}}"
+#    dest: "{{nc_webserver_path}}/nextcloud/config/{{ nc_config_file }}"
+#    owner: root
+#    group: root
+#    mode: 0644
+#  notify: restart apache2
+
+
+
+    
+   

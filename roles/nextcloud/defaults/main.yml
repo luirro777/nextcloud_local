@@ -1,0 +1,29 @@
+---
+
+nc_version: 20.0.0
+nc_url: "https://download.nextcloud.com/server/releases/nextcloud-{{ nc_version }}.zip"
+nc_download_path: "/tmp/nextcloud-{{ nc_version }}.zip"
+nc_webserver_path: "/var/www/html"
+
+nc_table_prefix: "nc_"
+nc_datadirectory: "/media/nc_storage/"
+nc_dbtype: "mysql"
+nc_dbname: "ncdb"
+nc_dbuser: "ncuser"
+nc_dbpassword: "kniewv4Op/"
+nc_dbtableprefix: "nc_"
+nc_default_language: "es"
+nc_force_language: "es"
+nc_default_locale: "es"
+nc_force_locale: "es"
+nc_mail_domain: "adiuc.org.ar"
+nc_mail_from_address: "nextcloud@adiuc.org.ar"
+nc_mail_smtphost: "smtp.webfaction.com"
+nc_mail_smtpport: "587"
+nc_smtpname: "adiuc_nextcloud"
+nc_smtppassword: "4Sle&Grovwem"
+nc_domain: "adiuc.unc.edu.ar"
+nc_ip: "172.28.100.22"
+
+nc_template: "config.php.j2"
+nc_config_file: "config.php"

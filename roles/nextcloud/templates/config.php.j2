@@ -1,0 +1,53 @@
+<?php
+$CONFIG = [
+'instanceid' => '',
+'passwordsalt' => '',
+'trusted_domains' =>
+   [
+    "{{ nc_domain }}",
+    "{{ nc_ip }}"    
+  ],
+'datadirectory' => "{{ nc_datadirectory }}",
+'version' => '',
+'dbtype' => "{{ nc_dbtype }}",
+'dbname' => "{{nc_dbname }}",
+'dbuser' => "{{ nc_dbuser }}",
+'dbpassword' => "{{ nc_dbpassword }}",
+'dbtableprefix' => "{{ nc_dbtableprefix }}",
+'installed' => false,
+'default_language' => "{{ nc_default_language }}",
+'force_language' => "{{ nc_force_language }}",
+'default_locale' => "{{ nc_default_locale }}",
+'force_locale' => "{{ nc_force_locale }}",
+'defaultapp' => 'files',
+'knowledgebaseenabled' => true,
+'allow_user_to_change_display_name' => true,
+'remember_login_cookie_lifetime' => 60*60*24*15,
+'session_lifetime' => 60 * 60 * 24,
+'auto_logout' => false,
+'token_auth_enforced' => false,
+'token_auth_activity_update' => 60,
+'auth.bruteforce.protection.enabled' => true,
+'auth.webauthn.enabled' => true,
+'mail_domain' => "{{ nc_mail_domain }}",
+'mail_from_address' => "{{ nc_mail_from_address }}",
+'mail_smtpmode' => 'smtp',
+'mail_smtphost' => "{{ nc_mail_smtphost }}",
+'mail_smtpport' => "{{nc_mail_smtpport}}",
+'mail_smtptimeout' => 10,
+'mail_smtpsecure' => 'tls',
+'mail_smtpauth' => true,
+'mail_smtpauthtype' => 'LOGIN',
+'mail_smtpname' => "{{ nc_smtpname }}",
+'mail_smtppassword' => "{{ nc_smtppassword }}",
+'mail_send_plaintext_only' => false,
+];
+
+
+
+
+
+
+
+
+

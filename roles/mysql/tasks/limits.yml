@@ -1,0 +1,11 @@
+---
+
+ - name: Replace LimitNOFILE in mysql config file
+   lineinfile:
+     dest: /etc/systemd/system/mysql.service
+     regexp: "^LimitNOFILE=16384"
+     line: "LimitNOFILE=100000"
+     state: present
+
+
+

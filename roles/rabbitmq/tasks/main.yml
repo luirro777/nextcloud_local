@@ -1,0 +1,12 @@
+---
+
+ - name: Install the rabbitmq packages
+   apt: name={{ item  }} state=present
+   with_items: "{{ rabbitmq_packages  }}"
+   
+ - name: Ensure rebbitmq is started
+   service:
+     name: rabbitmq-server
+     state: started
+     enabled: yes
+   

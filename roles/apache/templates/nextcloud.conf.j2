@@ -1,0 +1,27 @@
+
+
+{% for item in apache_vhost_nc %}
+<VirtualHost {{ apache_listen_ip }}:{{ apache_listen_port }}>
+  ServerName {{ item.servername }}
+  DocumentRoot "{{ item.documentroot }}"
+
+  Alias {{ item.alias }} "{{ item.documentroot }}"
+
+{% if item.serveradmin is defined %}
+  ServerAdmin {{ item.serveradmin }}
+{% endif %}
+
+  <Directory "{{ item.documentroot }}">
+    AllowOverride {{ item.allow_override | default(apache_allow_override) }}
+    Options {{ item.options | default(apache_options) }}
+    Require all granted
+    DirectoryIndex index.php
+     <IfModule mod_dav.c>
+            Dav off
+     </IfModule>
+     SetEnv HOME {{ item.documentroot }}
+     SetEnv HTTP_HOME {{ item.documentroot }}
+  </Directory>
+</VirtualHost>
+
+{% endfor %}

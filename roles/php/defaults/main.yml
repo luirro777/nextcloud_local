@@ -1,0 +1,12 @@
+---
+
+php_packages:
+   - php-xml 
+   - php-cli 
+   - php-cgi 
+   - php-mysql 
+   - php-mbstring 
+   - php-gd 
+   - php-curl 
+   - php-zip
+   - php-redis

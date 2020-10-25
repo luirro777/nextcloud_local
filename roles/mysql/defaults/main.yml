@@ -1,0 +1,24 @@
+---
+
+mysql_packages:
+  - mariadb-server
+  - python-selinux
+  - python-mysqldb
+
+mysql_service: mysql
+
+mysql_conf_dir: "/etc/mysql"
+mysql_port: 3306
+mysql_bind_address: "0.0.0.0"
+mysql_root_db_pass: 5Quounyutud#
+
+mysql_db: 
+  - name: ncdb
+
+mysql_users:
+  - name: ncuser
+    pass: kniewv4Op/
+    db: ncdb
+#    priv: "ncdb.*:ALL"
+
+
