@@ -46,7 +46,7 @@ Antes de ejecutar el playbook, configura las siguientes variables según tus nec
 Una vez configuradas las variables, ejecuta el playbook de Ansible para instalar Nextcloud:
 
 ```bash
-ansible-playbook -i inventory/nextcloud site.yml
+ansible-playbook -i inventory/nextcloud nextcloud.yml
 ```
 
 ### Contacto
