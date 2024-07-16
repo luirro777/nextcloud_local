@@ -30,7 +30,7 @@ apache_global_vhost_settings:
   DirectoryIndex index.php index.html
 
 apache_vhost_nc:
-  - servername: "nextcloud.adiuc.org.ar"
+  - servername: "mynextcloudserver.com"
     documentroot: "{{ webserver_root_nc  }}"
     alias: "/nextcloud"
     options: "FollowSymLinks MultiViews"
